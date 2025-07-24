@@ -1,0 +1,155 @@
+body {
+  background-color: #999;
+}
+#root {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+
+#select-show {
+  display: flex;
+  justify-content: center;
+  gap: 20vw;
+}
+
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 20px;
+  max-width: 80vw;
+  margin: 0 auto;
+}
+#controls {
+  display: flex;
+  /* flex-direction: row; */
+  gap: 20px;
+  max-width: 80vw;
+  justify-content: space-between;
+
+}
+#controls button:hover {
+  background-color: black;
+  color: #fff;
+}
+/* show */
+#showList-selector {
+  padding: 20px;
+}
+
+.episode,
+.show-container {
+
+  background-color: #fff;
+  width: calc(33.33% - 10px);
+  border-radius: 5px;
+  align-items: center;
+}
+.episode:hover,
+.show-container:hover {
+
+  transform: scale(0.8);
+}
+.episode h2,
+.show-container h2 {
+  padding: 20px;
+  border: 2px solid #111;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  width: calc(100%-20px);
+}
+.episode img,
+.show-container img {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  padding: 20px;
+}
+.episode p,
+.show-container p {
+  padding: 0 10px;
+}
+.episode button {
+  display: block;
+  padding: 10px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+.episode button:hover {
+  background-color: #111;
+  color: #fff;
+}
+@media (max-width: 600px) {
+  #select-show,
+  #controls {
+    flex-direction: column; /* Stack items vertically */
+    gap: 10px; /* Smaller gap for mobile */
+  }
+
+  #select-show input,
+  #select-show select,
+  #select-show p,
+  #select-show button {
+    width: 100%; /* Make all controls take up full width on small screens */
+  }
+
+  #select-show p {
+    font-size: 1.1rem; /* Slightly larger font for better readability */
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  #select-show,
+  #controls {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  #select-show input,
+  #select-show select,
+  #controls input,
+  #controls select {
+    flex: 1;
+    width: auto;
+  }
+
+  #select-show p {
+    flex: 0 0 auto;
+  }
+
+  #select-show button {
+    flex: 0 0 auto;
+  }
+}
+
+@media (min-width: 1025px) {
+  #select-show {
+    justify-content: space-between;
+  }
+
+  #select-show input,
+  #select-show select,
+  #controls input,
+  #controls select {
+    flex: 1;
+    width: auto;
+  }
+
+  #select-show p {
+    flex: 0 0 auto;
+  }
+
+  #select-show button {
+    flex: 0 0 auto;
+  }
+}
